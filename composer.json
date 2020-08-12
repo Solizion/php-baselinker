@@ -1,0 +1,28 @@
+{
+    "name": "solizion/php-baselinker",
+    "description": "php-baselinker is a PHP library for accessing the BaseLinker service.",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Kamil Ciekalski",
+            "email": "ciekals@solizion.com"
+        },
+        {
+            "name": "Dawid Miklas",
+            "email": "kontakt@solizion.com"
+        },
+        {
+            "name": "Marcin Szczot",
+            "email": "kontakt@solizion.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "symfony/http-client": "^4.4"
+    },
+    "autoload": {
+        "psr-0": {
+            "BaselinkerClient": "src/"
+        }
+    }
+}
