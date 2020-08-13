@@ -18,7 +18,9 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "symfony/http-client": "^4.4"
+        "symfony/http-client": "^4.4",
+        "symfony/validator": "4.4.x-dev",
+        "doctrine/annotations": "^1.11@dev"
     },
     "autoload": {
         "psr-0": {
