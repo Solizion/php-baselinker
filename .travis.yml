@@ -1,3 +1,30 @@
 language: php
+
 php:
     - '7.3.5'
+
+cache:
+  directories:
+    - vendor/
+
+branches:
+  only:
+    - master
+    - develop
+
+stages:
+  - "Quality Tests"
+  - "Unit Tests"
+
+jobs:
+  include:
+    - stage: "Unit Tests"
+      before_script:
+        - composer self-update
+        - composer install --prefer-source --no-interaction
+      script: phpunit --configuration phpunit.xml
+    - stage: "Quality Tests"
+      before_script:
+        - composer self-update
+        - composer install --prefer-source --no-interaction
+      script: ./vendor/bin/php-cs-fixer fix -v --dry-run --stop-on-violation --using-cache=no
